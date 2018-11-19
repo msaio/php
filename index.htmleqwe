@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<form>
+Name: <input type="text" id="input" name="fname">
+<input type="button" value="Submit" onclick="validateForm()">
+</form>
+<h1 id="showup"></h1>
+</body>
+</html>
+<script>
+        function validateForm() {
+            var x = document.getElementById("input").value;
+            if (x == "") {
+                window.alert("Name must be filled out");
+                return false;
+            }
+            document.getElementById("showup").innerHTML= x;
+        }
+</script>
+
+<script>
+function search(){
+    var input = document.getElementById("input").value;
+    if(input == ""){
+        window.alert("enter again");
+    }else{
+        switch (input){
+            case "dien thoai":
+                var i=0;
+                while(i<2){
+                    var t='<img class="col-md-4 thumbnail" src="' + products[i] + '"/>';
+                    document.getElementById("divSearchResult").innerHTML+=t;
+                i++;
+                }
+                break;
+
+            case "noi":
+                var t='<img class="col-md-4 thumbnail" src="' + products[6] + '"/>';
+                document.getElementById("divSearchResult").innerHTML+=t;
+                t='<img class="col-md-4 thumbnail" src="' + products[17] + '"/>';
+                document.getElementById("divSearchResult").innerHTML+=t;
+                t='<img class="col-md-4 thumbnail" src="' + products[18] + '"/>';
+                document.getElementById("divSearchResult").innerHTML+=t;
+                break;
+
+            case "sua rua mat":
+                var i=19;
+                while(i<24){
+                    var t='<img class="col-md-4 thumbnail" src="' + products[i] + '"/>';
+                    document.getElementById("divSearchResult").innerHTML+=t;
+                    i++;
+                }
+                break;
+            default:
+                showup();
+        }
+    }
+</script>
