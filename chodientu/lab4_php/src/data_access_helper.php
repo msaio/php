@@ -22,10 +22,11 @@
  		if ($GLOBALS['conn']->query($sql) === TRUE) {
  			echo "Your query has been executed successfully";
  		} else {
- 			echo "Error: " . $sql . "<br>" . $GLOBALS['conn']->error;
+			 echo "Error: " . $sql . "<br>" . $GLOBALS['conn']->error;
+			 $GLOBALS['conn']->query($sql);
  		}
  	}
-
+	
  	public function executeQuery($sql){
  		$result = $GLOBALS['conn']->query($sql);
  		return $result;
