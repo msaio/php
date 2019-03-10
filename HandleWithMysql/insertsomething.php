@@ -1,7 +1,9 @@
+<?php
+    include 'index.php';
+?>
 <?php 
-	include 'index.php';
-	$server = "localhost:3306";
-	$username = "useri";
+	$servername = "localhost:3306";
+	$username = "msaio";
 	$password = "123zxc";
 	
 	//create connection

@@ -10,7 +10,7 @@
 <?php  
    
     //create connection
-    $conn = new mysqli("localhost:3306", "useri", "123zxc", "test");     
+    $conn = new mysqli("localhost:3306", "msaio", "123zxc", "test");     
     //check connection
     echo "<br>";
     if ($conn->connect_error){
